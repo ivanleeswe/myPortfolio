@@ -1,0 +1,31 @@
+//this is a partial file using underscore in file name
+$primary-color:#444;  //var and mixins in diff file
+$secondary-color: #eece1a;
+$show-home-image: true;
+$home-image: url(../img/blueTech.jpg);
+$background-opacity: 0.9;
+
+@mixin easeOut { //function 
+  transition: all 1.5s ease-out;
+}
+
+@mixin background {
+  @if $show-home-image { //if show home image is true
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        content: ''; //must have when using pseudo element
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; //push background behind text
+        background: rgba($primary-color, $background-opacity); //use rgba to allow us have color and opacity to see through it
+      }
+    }
+  }
+}

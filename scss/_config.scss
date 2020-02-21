@@ -1,9 +1,11 @@
 //this is a partial file using underscore in file name
-$primary-color:rgb(68, 68, 68);  //var and mixins in diff file
+$primary-color: #444;  //var and mixins in diff file
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/blueTech.jpg);
 $background-opacity: 0.9;
+
+
 
 @mixin easeOut { //function 
   transition: all 1.5s ease-out;
@@ -29,6 +31,16 @@ $background-opacity: 0.9;
     }
   }
 }
+
+//Set Text Color (based onbackgroun)
+@function set-text-color($color) {//takes in initial color variable. we will be passing in initial background color
+  @if (lightness($color) > 40) { //if lightness of color we passed in is greater than 40, 
+    @return #000; //then we return black
+  } @else { //else return white as our color
+    @return #fff; 
+  }
+}
+
 
 //Media Query Mixins
 @mixin mediaSm {

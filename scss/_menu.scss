@@ -12,7 +12,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;// top topright bottom left
-    background: #ffff;
+    background: set-text-color($primary-color); //set text color some menu button changes to white if dark bg and black of light bg
     @include easeOut;
   }
 
@@ -118,7 +118,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($primary-color); //link color changes based on white/black
     text-decoration: none;
     @include easeOut;
 

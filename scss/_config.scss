@@ -1,5 +1,5 @@
 //this is a partial file using underscore in file name
-$primary-color:#444;  //var and mixins in diff file
+$primary-color:rgb(68, 68, 68);  //var and mixins in diff file
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/blueTech.jpg);
@@ -27,5 +27,30 @@ $background-opacity: 0.9;
         background: rgba($primary-color, $background-opacity); //use rgba to allow us have color and opacity to see through it
       }
     }
+  }
+}
+
+//Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) { //any css we put here will only apply if screen is 500px or less
+    @content; //anything we put inside this mixin in another file, we can just add this mixin and it will automatically put inside content
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) { 
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }

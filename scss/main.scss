@@ -14,6 +14,9 @@ body{
   margin: 0;
   font-family: 'Sergoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+  ::selection {
+    background: $secondary-color; 
+  }
 }
 
 //Headings
@@ -29,8 +32,8 @@ h3 {
   
   &.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2),  0.5);
+    // padding: 0.2rem 1rem;
+    // background: rgba(lighten(black, 2),  0.5);
   }
 }
 
@@ -47,6 +50,11 @@ header {
 
 .text-secondary {
   color:$secondary-color;
+}
+
+.text-tri {
+  color:white;
+  font-size: 20px;
 }
 
 main {
@@ -86,6 +94,8 @@ main {
   .bio-image {
     grid-area: bioimage;
     margin: auto;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     border: $secondary-color 3px solid;
   }
@@ -122,6 +132,7 @@ main {
 
   img {
     width: 100%;
+    height: 200px;
     border: 3px #fff solid;
 
     &.hover {
@@ -129,6 +140,17 @@ main {
       border-color: $secondary-color;
       @include easeOut;
     }
+  }
+  
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+    height: 190px;
+  }
+
+  .text-secondary {
+    color:$secondary-color;
   }
 }
 
@@ -142,7 +164,7 @@ main {
 
   div {
     font-size: 2rem;
-    border: 3px #fff solid;
+    // border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     @include easeOut;

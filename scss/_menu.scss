@@ -23,16 +23,19 @@
     .btn-line {
       // Line 1 - Rotate
       &:nth-child(1) { //grab 1st line
+        background: $secondary-color;
         transform: rotate(45deg) translate(5px, 5px)
       }
       
       //Line 2 - Hide
       &:nth-child(2) { //grab 2nd line
+        background: $secondary-color;
         opacity: 0;
       }
 
       //Line 3 - Rotate
       &:nth-child(3) { //grab 1st line
+        background: $secondary-color;
         transform: rotate(-45deg) translate(7px, -6px)
       }
     }
@@ -44,7 +47,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9; //see through of menu overlay
+  // opacity: 0.9; //see through of menu overlay
   visibility: hidden; //by default, we want links or anything to show by default
 
   &.show {
@@ -65,7 +68,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 5);
+    background: darken(black, 5); //nav link menu right side
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -78,7 +81,7 @@
 
   //Branding side
   &-branding {
-    background: $primary-color;
+    background: black; //portrait background side
     transform: translate3d(0, 100%, 0);
     @include easeOut;
 
@@ -88,9 +91,10 @@
     }
 
     .portrait {
-      width: 250px;
-      height: 250px;
-      background: url(../img/MyProfilePhoto.jpg);
+      width: 400px;
+      height: 400px;
+      background: url(../img/otherProfilePic.png);
+      background-size: cover;
       border-radius: 50%; //circular
       border: solid 3px $secondary-color;
     }
@@ -105,9 +109,9 @@
       transform: translate3d(0,0,0)
     }
 
-    &.current > a {
-      color: $secondary-color;
-    }
+    // &.current > a {
+    //   color: $secondary-color;
+    // }
   }
 
   .nav-link {

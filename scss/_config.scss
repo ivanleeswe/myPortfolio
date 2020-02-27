@@ -1,6 +1,6 @@
 //this is a partial file using underscore in file name
-$primary-color: #444;  //var and mixins in diff file
-$secondary-color: #eece1a;
+$primary-color: black;  //var and mixins in diff file
+$secondary-color: rgb(255, 0, 0);
 $show-home-image: true;
 $home-image: url(../img/blueTech.jpg);
 $background-opacity: 0.9;
@@ -8,7 +8,7 @@ $background-opacity: 0.9;
 
 
 @mixin easeOut { //function 
-  transition: all 1.5s ease-out;
+  transition: all .5s ease-out;
 }
 
 @mixin background {
@@ -26,7 +26,8 @@ $background-opacity: 0.9;
         width: 100%;
         height: 100%;
         z-index: -1; //push background behind text
-        background: rgba($primary-color, $background-opacity); //use rgba to allow us have color and opacity to see through it
+        background: black;
+        // background: rgba($primary-color, $background-opacity); //use rgba to allow us have color and opacity to see through it
       }
     }
   }
